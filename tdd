@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+var gaze_run_interrupt = require('gaze-run-interrupt');
+
+gaze_run_interrupt('{src,spec}/**/*.ts', 
+	[{
+  		command: 'node_modules/.bin/tsc'
+	}, 
+	{
+  		command: '../../node_modules/.bin/mocha',
+  		args: ['--reporter', 'min'],
+  		cwd: 'dist/cjs'
+	}]
+);
