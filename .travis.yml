@@ -1,0 +1,17 @@
+sudo: false
+language: node_js
+node_js:
+  - "4"
+  - "5"
+  - "6"
+  - "7"
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install
+
+script:
+  - tsc --project . && cd dist/cjs && ../../node_modules/.bin/mocha 
