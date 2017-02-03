@@ -2,10 +2,14 @@
 
 var gaze_run_interrupt = require('gaze-run-interrupt');
 
-gaze_run_interrupt('{src,spec}/**/*.ts', 
+gaze_run_interrupt('{src,test}/**/*.ts', 
 	[{
   		command: 'node_modules/.bin/tsc'
 	}, 
+    {
+  		command: 'node_modules/.bin/tslint',
+  		args: ['src', 'test']
+	},
 	{
   		command: '../../node_modules/.bin/mocha',
   		args: ['--reporter', 'min'],

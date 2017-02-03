@@ -14,8 +14,8 @@
     "tdd"
   ],
   "devDependencies": {
-    "@types/chai": "^3.4.34",
-    "@types/mocha": "^2.2.38",
+    "@types/chai": "*",
+    "@types/mocha": "*",
     "@types/node": "*",
     "ava": "*",
     "chai": "*",
@@ -23,6 +23,7 @@
     "gaze-run-interrupt": "*",
     "mocha": "*",
     "rimraf": "*",
+    "tslint": "*",
     "typescript": "*"
   }
 }
